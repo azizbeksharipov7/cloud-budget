@@ -1,0 +1,15 @@
+//General styles
+@import "./settings/fonts";
+@import "./settings/settings";
+@import "./variable/root";
+@import "./mixins/media";
+@import "./mixins/mixin";
+//components
+@import "./components/header";
+@import "./components/banner";
+@import "./components/managment";
+@import "./components/features";
+@import "./components/tech";
+@import "./components/money";
+@import "./components/contact";
+@import "./components/footer";

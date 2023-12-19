@@ -1,0 +1,188 @@
+.money {
+    background-color: $primary;
+    padding-block: 94.5px;
+
+    @include media(993){
+        padding-block: 75px;
+    }
+
+    @include media(768){
+        padding-block: 60px;
+    }
+
+    @include media(576){
+        padding-block: 40px;
+    }
+
+
+
+    &-content {
+        @include flexBetween;
+        gap: 70px;
+        position: relative;
+       
+        @include media(993){
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        @include media(768){
+            gap: 30px;
+        }
+
+
+        &-info {
+            max-width: 445px;
+            width: 100%;
+
+            @include media (993){
+                text-align: center;
+            }
+
+            &_title {
+                @include title;
+                color: $light;
+                margin-bottom: 47px;
+
+                @include media (993){
+                    margin-bottom: 35px;
+                }
+
+                @include media (768){
+                    margin-bottom: 25px;
+                }
+
+            }
+
+            &_text {
+                color: $light;
+                text-align: justify;
+                font-family: $LR;
+                font-size: $sm;
+                line-height: 140%;
+                margin-bottom: 40px;
+
+
+                @include media (993){
+                    margin-bottom: 35px;
+                    text-align: center;
+                }
+
+                @include media (768){
+                    margin-bottom: 25px;
+
+                }
+
+            }
+            .media-links{
+                @include flex;
+                gap: 23px;
+
+                @include media (993){
+                    justify-content: center;
+                }
+
+            }
+        }
+
+        .content-slider{
+            position: relative;
+            right: 44px;
+            top: 0;
+            max-width: 445px;
+            width: 100%;
+            height: 311px;
+
+            @include media(1250){
+                margin-right: 44px;
+            }
+            @include media(1100){
+                margin-right: 0;
+            }
+
+            &_img{
+                border-radius: 15px;
+                overflow: hidden;
+
+                img{
+                    display: block;
+                }
+
+            }
+
+            &_img::before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                @include media(576){
+                    height: 90%;
+                }
+
+            }
+
+            &_img.hidden::before{
+                background-color: rgba(211, 211, 211, 0.336);
+            }
+         
+            .first{
+                position: absolute;
+                top: 0;
+                z-index: 3;
+
+                @include media(576){
+                    width:90% ;
+                    height: 90%;
+                    top: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                
+            }
+            .second{
+                position: absolute;
+                top: 22px;
+                left: -44px;
+                z-index: 1;
+
+                @include media(576){
+                    left: -5px;
+                    width: 90px;
+                    height: 80%;
+                    transform: translateY(-50%);
+                }
+
+                @include media(500){
+                    display: none;
+                }
+            }
+            .third{
+                position: absolute;
+                top: 22px;
+                right: -44px;
+                z-index: 1;
+
+
+
+                @include media(576){
+                        right: -5px;
+                        width: 90px;
+                        height: 80%;
+                        transform: translateY(-50%);
+                    
+                }
+
+                @include media(500){
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,141 @@
+.contact {
+    padding-block: 117px 178px;
+
+    @include media (993) {
+        padding-block: 100px 150px;
+    }
+
+    @include media (768) {
+        padding-block: 80px 130px;
+    }
+
+    @include media (576) {
+        padding-block: 60px 80px;
+    }
+
+
+    &-content {
+        @include flexBetween;
+        gap: 30px;
+
+
+        @include media (880){
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    .contact-info {
+        width: 434px;
+        margin-bottom: 63px;
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+
+        @include media (880){
+            width: 100%;
+        }
+         
+        &_title{
+            @include title;
+            margin-bottom: 56px;
+
+            @include media(993){
+                margin-bottom: 45px;
+            }
+
+            @include media (768){
+                margin-bottom: 30px;
+            }
+
+            @include media(576){
+                margin-bottom: 20px;
+            }
+        }
+
+        &_text {
+            color: $secondary;
+            text-align: justify;
+            font-family: $LR;
+            font-size: $sm;
+            line-height: 140%;
+            max-width: 434px;
+            width: 100%;
+        }
+    }
+
+    .contact-form {
+        max-width: 540px;
+        width: 100%;
+
+        &_form {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+
+
+            &-name {
+                width: 255px;
+                @include input;
+
+            }
+
+            &-tel {
+                width: 100%;
+                @include input;
+
+            }
+
+            .select {
+                width: 100%;
+                padding: 0;
+
+                position: relative;
+
+                &::after {
+                    content: url(../../images/icons/arrow-down.svg);
+                    position: absolute;
+                    top: 50%;
+                    right: 26px;
+                    transform: translateY(-50%);
+
+                }
+
+                select {
+                    width: 100%;
+                    -webkit-appearance: none;
+                    @include input;
+                    padding: 6px 0 6px 40px;
+                    padding-block: 20px;
+
+                }
+            }
+
+            .submit-btn {
+                color: $light;
+                font-family: $LR;
+                font-size: $sm;
+                text-transform: uppercase;
+                background-color: $primary;
+                align-self: flex-start;
+                padding: 17px 34px;
+                border-radius: 6px;
+                border: 1px solid transparent;
+                transition: 0.4s;
+
+
+                &:hover{
+                    background-color: $light;
+                    color: $primary;
+                    border:1px solid $primary;
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+    }
+}
